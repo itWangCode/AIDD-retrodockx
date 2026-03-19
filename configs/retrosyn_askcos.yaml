@@ -1,0 +1,18 @@
+# ASKCOS configuration
+# Reference: https://github.com/coleygroup/ASKCOS
+
+server:
+  url: "https://askcos.mit.edu"
+  token: ""
+  timeout: 120
+
+tree_builder:
+  max_depth: 5
+  max_branching: 25
+  expansion_time: 30
+  max_trees: 10
+  return_first: false
+
+buyables:
+  source: "askcos_data"   # or "local_csv"
+  local_path: "data/raw/buyables.csv"

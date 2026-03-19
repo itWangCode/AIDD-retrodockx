@@ -1,0 +1,47 @@
+project:
+  name: RetroDock-X
+  version: "1.0.0"
+
+backend:
+  default: rdkit          # rdkit | askcos | aizynth
+  askcos_url: "https://askcos.mit.edu"
+  askcos_token: ""
+  aizynth_config: configs/retrosyn_aizynth.yaml
+  max_depth: 5
+  n_routes: 5
+  use_cache: true
+  cache_dir: data/cache
+
+models:
+  xgboost:
+    n_estimators: 200
+    max_depth: 6
+    lr: 0.05
+  mlp:
+    hidden_layers: [256, 128, 64]
+    max_iter: 300
+  dual_branch:
+    hidden_mol: 128
+    hidden_route: 64
+    n_epochs: 50
+    lr: 0.001
+    alpha: 0.30    # synthesizability weight
+    beta:  0.20    # docking consistency weight
+    gamma: 0.15    # MD stability weight
+
+shap:
+  enabled: true
+  n_background: 50
+  n_explain: 20
+  nsamples: 100
+
+output:
+  figures_dir: outputs/figures
+  routes_dir:  outputs/routes
+  reports_dir: outputs/reports
+  dpi: 300
+  style: macaroon   # macaroon color palette
+
+logging:
+  level: INFO
+  file: outputs/retrodockx.log

@@ -1,0 +1,888 @@
+{
+  "pipeline": "RetroDock-X",
+  "inputs": {
+    "smiles": [
+      "COC(=O)c1ccccc1"
+    ],
+    "names": [
+      "MethylBenzoate"
+    ],
+    "backend": "rdkit"
+  },
+  "n_routes": 5,
+  "model_results": {
+    "xgboost": {
+      "fit": {
+        "train_mse": 8.360417161585414e-07,
+        "model": "XGBoostReranker"
+      },
+      "loss": {
+        "total": 1.48351,
+        "ranking_loss": 0.99597,
+        "synthesizability_loss": 0.0,
+        "docking_consistency": 2.0,
+        "md_stability_loss": 0.58362,
+        "alpha": 0.3,
+        "beta": 0.2,
+        "gamma": 0.15
+      },
+      "top3_routes": [
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route1",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -7.566701685125553,
+          "md_rmsd": 1.252004540878173,
+          "md_stability": 0.9252098461233531,
+          "reranker_score": 0.694998562335968,
+          "rank": 1,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -7.566701685125553,
+            "md_rmsd": 1.252004540878173,
+            "md_stability": 0.9252098461233531
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route3",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -8.129950630931123,
+          "md_rmsd": 1.5573709300970717,
+          "md_stability": 0.7952895890390432,
+          "reranker_score": 0.6815594434738159,
+          "rank": 2,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -8.129950630931123,
+            "md_rmsd": 1.5573709300970717,
+            "md_stability": 0.7952895890390432
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route5",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -9.467565576116304,
+          "md_rmsd": 1.7882849365782831,
+          "md_stability": 0.6625256797774264,
+          "reranker_score": 0.6811060309410095,
+          "rank": 3,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -9.467565576116304,
+            "md_rmsd": 1.7882849365782831,
+            "md_stability": 0.6625256797774264
+          }
+        }
+      ]
+    },
+    "mlp": {
+      "fit": {
+        "train_accuracy": 1.0,
+        "model": "MLPReranker"
+      },
+      "loss": {
+        "total": 1.03918,
+        "ranking_loss": 0.606,
+        "synthesizability_loss": 0.042,
+        "docking_consistency": 2.0,
+        "md_stability_loss": 0.1372,
+        "alpha": 0.3,
+        "beta": 0.2,
+        "gamma": 0.15
+      },
+      "top3_routes": [
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route1",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -7.566701685125553,
+          "md_rmsd": 1.252004540878173,
+          "md_stability": 0.9252098461233531,
+          "reranker_score": 0.9955331532625152,
+          "rank": 1,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -7.566701685125553,
+            "md_rmsd": 1.252004540878173,
+            "md_stability": 0.9252098461233531
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route3",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -8.129950630931123,
+          "md_rmsd": 1.5573709300970717,
+          "md_stability": 0.7952895890390432,
+          "reranker_score": 0.01035161576940598,
+          "rank": 2,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -8.129950630931123,
+            "md_rmsd": 1.5573709300970717,
+            "md_stability": 0.7952895890390432
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route2",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -7.722415979176995,
+          "md_rmsd": 1.4880507045799163,
+          "md_stability": 0.7850101543427356,
+          "reranker_score": 0.004863604256372449,
+          "rank": 3,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -7.722415979176995,
+            "md_rmsd": 1.4880507045799163,
+            "md_stability": 0.7850101543427356
+          }
+        }
+      ]
+    },
+    "dual_branch": {
+      "fit": {
+        "model": "DualBranchRouteRanker",
+        "final_loss": 1.35491,
+        "loss_history": [
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39292,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39292,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39292,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03599,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35492,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03597,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.3929,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          },
+          {
+            "total": 1.35491,
+            "ranking_loss": 1.03598,
+            "synthesizability_loss": 0.0,
+            "docking_consistency": 1.3,
+            "md_stability_loss": 0.39291,
+            "alpha": 0.3,
+            "beta": 0.2,
+            "gamma": 0.15
+          }
+        ],
+        "final_predictions": [
+          0.4379053917538461,
+          0.4911806300414538,
+          0.49608913938952665,
+          0.4722371536361871,
+          0.39889099206267964
+        ]
+      },
+      "loss": {
+        "total": 1.46432,
+        "ranking_loss": 1.00584,
+        "synthesizability_loss": 0.0,
+        "docking_consistency": 2.0,
+        "md_stability_loss": 0.38989,
+        "alpha": 0.3,
+        "beta": 0.2,
+        "gamma": 0.15
+      },
+      "top3_routes": [
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route3",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -8.129950630931123,
+          "md_rmsd": 1.5573709300970717,
+          "md_stability": 0.7952895890390432,
+          "reranker_score": 0.49608913938952665,
+          "rank": 1,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -8.129950630931123,
+            "md_rmsd": 1.5573709300970717,
+            "md_stability": 0.7952895890390432
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route2",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -7.722415979176995,
+          "md_rmsd": 1.4880507045799163,
+          "md_stability": 0.7850101543427356,
+          "reranker_score": 0.4911806300414538,
+          "rank": 2,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -7.722415979176995,
+            "md_rmsd": 1.4880507045799163,
+            "md_stability": 0.7850101543427356
+          }
+        },
+        {
+          "target_smiles": "COC(=O)c1ccccc1",
+          "target_name": "MethylBenzoate_route4",
+          "steps": [
+            {
+              "smiles": "COC(=O)c1ccccc1",
+              "precursors": [
+                "O=C(O)c1ccccc1",
+                "CO"
+              ],
+              "template_id": "ester_hydrolysis",
+              "template_smarts": "[C:1](=[O:2])[O:3][C,c:4]>>[C:1](=[O:2])O.[O:3][C,c:4]",
+              "reaction_class": "Hydrolysis",
+              "confidence": 0.9,
+              "conditions": "H2O, H+ or OH-, heat",
+              "depth": 0,
+              "is_purchasable": true,
+              "source": "rdkit_template",
+              "precursor_count": 2,
+              "template_entropy": 0.0,
+              "branch_depth": 0,
+              "purchasable_ratio": 1.0
+            }
+          ],
+          "backend": "rdkit_template",
+          "backend_score": 0.9,
+          "route_depth": 1,
+          "step_count": 1,
+          "avg_confidence": 0.9,
+          "min_confidence": 0.9,
+          "purchasable_ratio": 1.0,
+          "template_entropy": 1.111111201872017e-10,
+          "branch_factor": 2.0,
+          "reaction_class_diversity": 1.0,
+          "commercial_bb_ratio": 0.0,
+          "docking_score": -8.593264674158942,
+          "md_rmsd": 1.852922965051124,
+          "md_stability": 0.7361986256920209,
+          "reranker_score": 0.4722371536361871,
+          "rank": 3,
+          "feature_vector": {
+            "route_depth": 1,
+            "step_count": 1,
+            "avg_confidence": 0.9,
+            "min_confidence": 0.9,
+            "purchasable_ratio": 1.0,
+            "template_entropy": 1.111111201872017e-10,
+            "branch_factor": 2.0,
+            "reaction_class_diversity": 1.0,
+            "commercial_bb_ratio": 0.0,
+            "backend_score": 0.9,
+            "docking_score": -8.593264674158942,
+            "md_rmsd": 1.852922965051124,
+            "md_stability": 0.7361986256920209
+          }
+        }
+      ]
+    }
+  },
+  "figures": [
+    "outputs/figures/analysis_route_graph.png",
+    "outputs/figures/analysis_model_comparison.png",
+    "outputs/figures/analysis_batch_ranking.png"
+  ],
+  "elapsed_s": 4.5
+}

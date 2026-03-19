@@ -1,0 +1,7 @@
+# PDB IDs for batch download
+# One per line, lines starting with # are ignored
+2HHB
+1ABC
+4HHB
+1HSG
+6LU7

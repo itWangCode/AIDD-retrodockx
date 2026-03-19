@@ -1,0 +1,23 @@
+# AiZynthFinder configuration
+# Reference: https://molecularai.github.io/aizynthfinder/configuration.html
+
+policy:
+  files:
+    uspto:
+      - models/pretrained/uspto_model.onnx
+      - models/pretrained/uspto_templates.csv.gz
+
+stock:
+  files:
+    zinc: models/pretrained/zinc_stock.hdf5
+
+search:
+  algorithm: mcts
+  iteration_limit: 100
+  max_transforms: 3
+  return_first: false
+  time_limit: 120
+
+finder:
+  post_processing:
+    route_scorers: ["state score", "number of reactions"]
